@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-6">
+            <form [formGroup]="registerForm">
+                <h3> REGISTRATION FORM</h3>
+            <div>
+            <input type="text" placeholder="firstname" formControlName="firstname">
+            <span 
+            *ngIf="firstname.touched  && firstname.invalid">
+            FirstName is required
+        </span>
+        </div>
+
+        <div>
+            <input type="text" placeholder="lastname" formControlName="lastname">
+            <span 
+            *ngIf="lastname.touched  && lastname.invalid">
+            LastName is required
+        </span>
+        </div>
+
+        <div>
+            <input type="text" placeholder="email" formControlName="email">
+            <span 
+            *ngIf="email.touched  && email.invalid">
+            Email is required
+        </span>
+        </div>
+
+        <div>
+            <input type="password" placeholder="password" formControlName="password">
+            <span 
+            *ngIf="password.touched  && password.invalid">
+            Password is required
+            </span>
+        </div>
+
+        <div>
+            <input type="password" placeholder="Confirm password" formControlName="confirmpassword">
+            <span 
+            *ngIf="confirmpassword.touched  && confirmpassword.invalid">
+            Confirm Password is required
+        </span>
+        </div>
+
+        <div>
+            <input type="text" placeholder="phonenumber" formControlName="phonenumber">
+            <span 
+            *ngIf="phonenumber.touched  && phonenumber.invalid">
+            Phonenumber is required
+        </span>
+        </div>
+       <div>
+           <button type="button" (click)="submit()">Submit</button>
+       </div>
+
+        </form>
+    </div>
+</div>
